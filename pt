@@ -1,0 +1,27 @@
+
+[1mFrom:[0m /home/sam/programming/repos/ruby-projects/stock-picker/stock-picker.rb:12 Object#stock_picker:
+
+     [1;34m3[0m: [32mdef[0m [1;34mstock_picker[0m(prices)
+     [1;34m4[0m:   bprice = prices[[1;34m0[0m]
+     [1;34m5[0m:   sprice = prices[[1;34m1[0m]
+     [1;34m6[0m:   bday = [1;34m0[0m
+     [1;34m7[0m:   sday = [1;34m1[0m
+     [1;34m8[0m:   profit = sprice - bprice
+     [1;34m9[0m:   prices.each_with_index [32mdo[0m |buy_price, buy_day|
+    [1;34m10[0m:     prices.drop(buy_day+[1;34m1[0m).each_with_index [32mdo[0m |sell_price, sell_day|
+    [1;34m11[0m:       binding.pry
+ => [1;34m12[0m:       [32mif[0m sell_price - buy_price > profit
+    [1;34m13[0m:         profit = sell_price - buy_price
+    [1;34m14[0m:         bprice = prices[buy_day]
+    [1;34m15[0m:         sprice = prices[sell_day]
+    [1;34m16[0m:         bday = buy_day
+    [1;34m17[0m:         sday = sell_day + bday
+    [1;34m18[0m:       [32mend[0m
+    [1;34m19[0m:     [32mend[0m
+    [1;34m20[0m: 
+    [1;34m21[0m: 
+    [1;34m22[0m: 
+    [1;34m23[0m:   [32mend[0m
+    [1;34m24[0m:   puts [31m[1;31m"[0m[31m[#{bday}[0m[31m,#{sday}[0m[31m] for a profit of $#{sprice}[0m[31m - #{bprice}[0m[31m = #{profit}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m25[0m: [32mend[0m
+
